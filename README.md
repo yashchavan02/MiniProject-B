@@ -1,4 +1,4 @@
-# 🟡 ATM Machine Document
+## 🟡 ATM Machine Document
 
 ---
 
@@ -18,7 +18,7 @@ This Python program simulates an ATM (Automated Teller Machine) system. It allow
 
 ---
 
-## 🟢 Implementation
+## ⭕ Implementation
 
 The program is implemented using Python 3 and utilizes several concepts including object-oriented programming (OOP), input validation, and datetime manipulation. Key components of the program include:
 
@@ -30,7 +30,7 @@ The program is implemented using Python 3 and utilizes several concepts includin
 
 ---
 
-## 🟠 Usage
+## ⭕ Usage
 
 1. **Starting the ATM** : Run the program and input 's' to start the ATM.
 2. **Account Creation** : Enter account details including name, email, account type, initial deposit, and PIN.
