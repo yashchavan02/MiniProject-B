@@ -1,8 +1,30 @@
+## 🔵 Mini Project B Details
+
+|Project Title| ATM Machine       |
+|:-----------:|:-----------------:|
+|Bank Name    |YC Bank            |
+|Owner Name   |Yash Anil Chavan   |
+|Project Type |Console Based      |
+
+---
+
+## 🟤 Used Python Concept
+- [x] Time Module
+- [x] Random Module
+- [x] Datetime Module
+- [x] Loops
+- [x] String Formatting
+- [x] Classes and Objects
+- [x] Class Methods
+- [x] Conditional Statements
+
+---
+
 ## 🟡 ATM Machine Document
 
 ---
 
-## 🔵 Overview
+## 🟢 Overview
 
 This Python program simulates an ATM (Automated Teller Machine) system. It allows users to create a new bank account, perform various transactions like withdrawals, deposits, and check their balance. The program is interactive, prompting users for inputs and displaying relevant information accordingly.
 
