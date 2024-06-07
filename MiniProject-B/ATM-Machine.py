@@ -63,7 +63,7 @@ class ATM:
                 self.print_data() 
                 self.check_pin()
             else:
-                print("$ Invalid input.")
+                print("$ Invalid Input.")
 
     def check_pin(self):
         while True:
