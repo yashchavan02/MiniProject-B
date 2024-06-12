@@ -6,7 +6,7 @@
 |Owner Name   |Yash Anil Chavan   |
 |Project Type |Console Based      |
 
-----
+---
 
 ## 🟤 Used Python Concept
 - [x] Time Module
@@ -18,17 +18,17 @@
 - [x] Class Methods
 - [x] Conditional Statements
 
-----
+---
 
 ## 🟡 ATM Machine Document
 
-----
+---
 
 ### 🟢 Overview
 
 This Python program simulates an ATM (Automated Teller Machine) system. It allows users to create a new bank account, perform various transactions like withdrawals, deposits, and check their balance. The program is interactive, prompting users for inputs and displaying relevant information accordingly.
 
-----
+---
 
 ### ⭕ Features
 
@@ -38,7 +38,7 @@ This Python program simulates an ATM (Automated Teller Machine) system. It allow
 4. **Input Validation** : The program validates user inputs to ensure data integrity and user-friendly interaction.
 5. **Continuity and Exit** : After each transaction, users are prompted if they want to continue using the ATM. Typing 'no' exits the program.
 
-----
+---
 
 ### ⭕ Implementation
 
@@ -50,7 +50,7 @@ The program is implemented using Python 3 and utilizes several concepts includin
   - `get_email_address()` : Prompts users to enter their email address and validates its format.
 - **Main Functionality Loop**: The `start()` method initiates the ATM functionalities, prompting users to create a new account and then perform transactions.
 
-----
+---
 
 ### ⭕ Usage
 
@@ -60,12 +60,12 @@ The program is implemented using Python 3 and utilizes several concepts includin
 4. **Continuity** : After each transaction, choose whether to continue or exit the ATM.
 
 
-----
+---
 ### 🔴 Conclusion
 
 This ATM program provides a basic yet functional simulation of a real-world ATM system. It can be further extended with additional features such as account history, transfer functionalities, or improved security measures.
 
-----
+---
 <br/>
 
 ## 🟣 Screenshot
