@@ -22,20 +22,39 @@ class ATM:
             else:
                 break
 
+    def intial_balance(self):
+        while True:
+          self.current_balance = float(input("$ Initial Deposit Amount : ")) 
+          if self.current_balance <= 0:
+                print("$ Please Enter valid Initial Deposit Amount")
+          else:
+            break
+          
     def get_account_data(self):
         print("\n$ Please Enter Your Account Details.")
         self.acc_holder_name = input("$ Account Holder Name : ")
         self.get_email_address()
         self.acc_type = input("$ Account Type (Saving/Current/Salary) : ") 
-        self.current_balance = float(input("$ Initial Deposit Amount : ")) 
-        self.pin = input("$ Create 4 Digit PIN : ")
-    
+        self.intial_balance()
+        while True:
+           self.gender = input("$ Enter Your Gender[M/F] : ")
+           if self.gender.upper() == "MALE" or self.gender.upper() == "M":
+              self.customer_gen = "MR."
+              break
+           elif self.gender.upper() == "FEMALE" or self.gender.upper() == "F":
+              self.customer_gen ="MS."
+              break   
+           else:
+              print("$ Please Enter Valid Gender.")
+              
+        self.pin = input("$ Create 4 Digit PIN : ")    
+
     def print_data(self): 
         time.sleep(0.25)
         print("\n$ Bank Account Is Created Successfully.") 
         time.sleep(0.25)
         print(f"\n$ {self.acc_type.capitalize()} Bank Account")
-        print(f"$ Customer Name : MR. {self.acc_holder_name.upper()}") 
+        print(f"$ Customer Name : {self.customer_gen } {self.acc_holder_name.upper()}") 
         print(f"$ Customer Email Id : {self.Email_Id}")
         print(f"$ Bank Account No. 3241{self.pin}{self.account_number}") 
         print("\n") 
@@ -46,12 +65,31 @@ class ATM:
             print("Insufficient balance! Your available balance is ", self.current_balance) 
         else: 
             self.current_balance -= withdrawal_amount 
-            print(f"$ Rs. {withdrawal_amount} Debited from XXXXXXXX{self.account_number} Account On {day_date} . Current Balance: {self.current_balance}") 
+            print(f"$ Rs. {withdrawal_amount} Debited from XXXXXXXX{self.account_number} Account On {day_date} .") 
 
     def deposit_paisa(self): 
         deposit_amount = float(input("\n$ Enter Deposit Amount: ")) 
         self.current_balance += deposit_amount 
-        print(f"$ Rs. {deposit_amount} Credited To XXXXXXXX{self.account_number} Account On {day_date}. Current Balance: {self.current_balance}") 
+        print(f"$ Rs. {deposit_amount} Credited To XXXXXXXX{self.account_number} Account On {day_date}.") 
+    def change_pin(self):
+        count = 0
+        while True:
+            print("\n$ Please Enter Your Old Pin.")
+            old_pin = input("Input Here : ")
+            if old_pin == self.pin:
+                print("\n$ Please Enter Your New Pin.")
+                new_pin = input("Input Here : ")
+                self.pin = new_pin
+                print("\n$ Your Pin Is Changed Successfully.")
+                break
+            else:
+                count += 1
+                if count == 3:
+                    print("\n$ You Have Entered Wrong Pin 3 Times. Your Account Is Blocked.")                   
+                    print("\n$ Thank You For Using YC Bank ATM. \n\n")
+                    exit()
+                else:
+                    print("\n$ Invalid Pin , Please Try Again.")
 
     def start(self):
         while True:
@@ -83,6 +121,7 @@ class ATM:
             print("1. Withdrawal")
             print("2. Deposit")
             print("3. Check Balance")
+            print("4. Change Pin")
             choice_value = input("\nInput Here : ")
             if choice_value == "1":
                 self.withdrawal_paisa()
@@ -90,6 +129,8 @@ class ATM:
                 self.deposit_paisa()
             elif choice_value == "3":
                 print(f"\n$ Your Current Balance is {self.current_balance}")
+            elif choice_value == "4":
+                self.change_pin()    
             else:
                 print("\n$ Invalid input! Please enter a valid input.")
                 continue
