@@ -70,9 +70,22 @@ This ATM program provides a basic yet functional simulation of a real-world ATM 
 
 ## 🟣 Screenshot
 - 01
-     
-![PythonProjectA](https://github.com/yashchavan02/MiniProject-B/assets/152779289/702c8617-4eab-4788-8444-f5bbe660d6f2)
+  
+![NewPythonProjectA](https://github.com/yashchavan02/MiniProject-B/assets/152779289/c3909d86-026c-4c9b-8af4-b53041d9151c)
 
 - 02
+ 
+![NewPythonProjectB](https://github.com/yashchavan02/MiniProject-B/assets/152779289/505a4174-2b6f-4626-a2ef-16070b65bbea)
 
-![PythonProjectB](https://github.com/yashchavan02/MiniProject-B/assets/152779289/97eb77a7-8d06-4e36-8537-cf35f3232e68)
+- 03
+  
+![NewPythonProjectC](https://github.com/yashchavan02/MiniProject-B/assets/152779289/c6bb3abb-bf7d-434f-9fa4-a1aa970d6e8f)
+
+- 04
+
+![NewPythonProjectD](https://github.com/yashchavan02/MiniProject-B/assets/152779289/d87f765e-03b8-4b1e-bfc8-d1cda610d2fb)
+
+
+
+
+
