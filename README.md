@@ -5,6 +5,7 @@
 |Bank Name    |YC Bank            |
 |Owner Name   |Yash Anil Chavan   |
 |Project Type |Console Based      |
+|Data Manage  |MySql              |
 
 ---
 
