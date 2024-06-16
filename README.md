@@ -33,46 +33,44 @@ git clone https://github.com/yashchavan02/MiniProject-B.git
 
 ---
 
-### 🟢 Overview
+###      🟢 Overview
+This documentation provides an in-depth explanation of an ATM system implemented in Python, with a backend integration using MySQL. The system allows users to perform various banking operations such as creating accounts, depositing money, withdrawing money, changing PINs, and checking balances.
 
-This Python program simulates an ATM (Automated Teller Machine) system. It allows users to create a new bank account, perform various transactions like withdrawals, deposits, and check their balance. The program is interactive, prompting users for inputs and displaying relevant information accordingly.
+### 🟣 Implementation Overview
+The ATM system is designed with the following features and functionality:
 
----
+#### 🔵 Account Creation
+- Users can create a bank account by providing their name, email, gender, account type, initial deposit amount, and PIN.
+- Account details are stored in a MySQL database `bank` , specifically in the `customerdata` table.
 
-### ⭕ Features
+#### 🟠 Transactions
+- **Deposit:** Users can deposit money into their account.
+- **Withdrawal:** Users can withdraw money from their account, provided they have sufficient funds.
+- **Balance Inquiry:** Users can check their current account balance.
 
-1. **Account Creation** : Users can create a new bank account by providing necessary details like name, email address, account type, initial deposit amount, and PIN.
-2. **Transaction Handling** : Users can perform withdrawals and deposits from their accounts. The program ensures balance sufficiency for withdrawals and updates the balance accordingly for both withdrawal and deposit transactions.
-3. **PIN Verification** : Users are required to enter a 4-digit PIN to access their accounts. Incorrect PIN entries prompt re-entry.
-4. **Input Validation** : The program validates user inputs to ensure data integrity and user-friendly interaction.
-5. **Continuity and Exit** : After each transaction, users are prompted if they want to continue using the ATM. Typing 'no' exits the program.
+#### 🟤 Security
+- The system includes PIN validation when accessing the account or making changes.
+- Account locking mechanism after three unsuccessful PIN attempts to prevent unauthorized access.
 
----
+### 🟡 Uses and Functionality
 
-### ⭕ Implementation
+#### ⭕ Account Creation
+- Users enter their personal details such as name, email, gender, account type, and initial deposit amount.
+- A unique 4-digit PIN is set during account creation.
+- Upon successful creation, account details are stored in the MySQL database.
 
-The program is implemented using Python 3 and utilizes several concepts including object-oriented programming (OOP), input validation, and datetime manipulation. Key components of the program include:
+#### ⭕ Transactions
+- **Deposit:** Users can add funds to their account, with the transaction recorded including the date and time.
+- **Withdrawal:** Users can withdraw funds, with the system checking for available balance before processing.
+- **Balance Inquiry:** Users can check their current balance, displayed in the system.
 
-- **ATM Class**: Defines the ATM functionalities including account creation, transaction handling, PIN verification, and user choice.
-- **Helper Functions**: 
-  - `account_number_generate()` : Generates a random 4-digit account number.
-  - `get_email_address()` : Prompts users to enter their email address and validates its format.
-- **Main Functionality Loop**: The `start()` method initiates the ATM functionalities, prompting users to create a new account and then perform transactions.
+#### ⭕ PIN Management
+- **Change PIN:** Users can change their PIN by entering the old PIN and setting a new 4-digit PIN.
+- **Account Locking:** After three consecutive incorrect PIN attempts, the account is locked for security reasons. The user must contact support to regain access.
 
----
-
-### ⭕ Usage
-
-1. **Starting the ATM** : Run the program and input 's' to start the ATM.
-2. **Account Creation** : Enter account details including name, email, account type, initial deposit, and PIN.
-3. **Transactions** : Choose from withdrawal, deposit, or balance check options by entering the corresponding number.
-4. **Continuity** : After each transaction, choose whether to continue or exit the ATM.
-
-
----
 ### 🔴 Conclusion
+This ATM system provides a basic yet functional implementation of banking operations integrated with a MySQL database for data persistence. It offers essential features for managing accounts securely and performing common banking transactions. Future enhancements could include additional security measures, transaction history tracking, and multi-account support.
 
-This ATM program provides a basic yet functional simulation of a real-world ATM system. It can be further extended with additional features such as account history, transfer functionalities, or improved security measures.
 
 ---
 <br/>
