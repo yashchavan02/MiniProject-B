@@ -13,6 +13,7 @@ git clone https://github.com/yashchavan02/MiniProject-B.git
 |Bank Name    |YC Bank            |
 |Owner Name   |Yash Anil Chavan   |
 |Project Type |Console Based      |
+|Data Manage  |MySql              |
 
 ---
 
