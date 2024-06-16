@@ -78,6 +78,9 @@ class ATM:
                 print("$ Please enter a valid 4 digit PIN")
 
     def print_data(self):
+        self.account_number = account_number_generate()
+        self.acc_no = int("3241" + self.pin + self.account_number)
+
         time.sleep(0.25)
         print("\n$ Bank Account Is Created Successfully.")
         time.sleep(0.25)
@@ -86,7 +89,6 @@ class ATM:
         print(f"$ Customer Email Id: {self.email_id}")
         print(f"$ Bank Account No. 3241{self.pin}{self.account_number}")
 
-        self.acc_no = int("3241" + self.pin + self.account_number)
         customer_data = (self.acc_holder_name, self.email_id, self.mysql_gen, self.pin, self.acc_no)
         try:
             mycursor.execute(insert_customer_query, customer_data)
@@ -99,7 +101,7 @@ class ATM:
 
     def withdrawal_paisa(self):
         try:
-            withdrawal_amount = float(input("\n$ Enter Withdrawal Amount From " + self.acc_type.capitalize() + " Account: "))
+            withdrawal_amount = float(input(f"\n$ Enter Withdrawal Amount From {self.acc_type.capitalize()} Account: "))
             if self.current_balance < withdrawal_amount:
                 print("Insufficient balance! Your available balance is", self.current_balance)
             else:
@@ -126,6 +128,11 @@ class ATM:
                     if new_pin.isdigit() and len(new_pin) == 4:
                         self.pin = new_pin
                         print("\n$ Your Pin Is Changed Successfully.")
+                        try:
+                            mycursor.execute("UPDATE customerdata SET pin = %s WHERE bank_acc = %s", (new_pin, self.acc_no))
+                            con.commit()
+                        except mysql.connector.Error as err:
+                            print(f"Error: {err}")
                         break
                     else:
                         print("$ Please enter a valid 4 digit PIN")
@@ -134,6 +141,11 @@ class ATM:
                 count += 1
                 if count == 3:
                     print("\n$ You Have Entered Wrong Pin 3 Times. Your Account Is Blocked.")
+                    try:
+                        mycursor.execute("DELETE FROM customerdata WHERE bank_acc = %s", (self.acc_no,))
+                        con.commit()
+                    except mysql.connector.Error as err:
+                        print(f"Error: {err}")
                     print("\n$ Thank You For Using YC Bank ATM.\n\n")
                     exit()
                 else:
@@ -146,13 +158,13 @@ class ATM:
                 print("\n<<--- Welcome To YC Bank ATM --->>")
                 print("\n$ Please Create A New Bank Account.")
                 self.get_account_data()
-                self.account_number = account_number_generate()
                 self.print_data()
                 self.check_pin()
             else:
                 print("$ Invalid Input.")
 
     def check_pin(self):
+        count_pin = 0
         while True:
             pin_value = input("$ Please Enter Your 4 Digit Pin: ")
             if pin_value == self.pin:
@@ -160,6 +172,16 @@ class ATM:
                 break
             else:
                 print("$ Invalid Pin.")
+                count_pin += 1
+                if count_pin == 3:
+                    print("\n$ You Have Entered Wrong Pin 3 Times. Your Account Is Blocked.")
+                    print("\n$ Thank You For Using YC Bank ATM.\n\n")
+                    try:
+                        mycursor.execute("DELETE FROM customerdata WHERE bank_acc = %s", (self.acc_no,))
+                        con.commit()
+                    except mysql.connector.Error as err:
+                        print(f"Error: {err}")
+                    exit()
 
     def choice(self):
         while True:
@@ -183,7 +205,9 @@ class ATM:
 
             if input("\nDo you want to continue (yes/no)? ").lower() != "yes":
                 print("\n$ Thank You For Using YC Bank ATM.\n\n")
-                exit()
+                break
+
+        con.close()
 
 atm = ATM()
 atm.start()
