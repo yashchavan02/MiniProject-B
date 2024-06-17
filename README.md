@@ -11,19 +11,21 @@ git clone https://github.com/yashchavan02/MiniProject-B.git
 |Project Title| ATM Machine       |
 |:-----------:|:-----------------:|
 |Bank Name    |YC Bank            |
-|Owner Name   |Yash Anil Chavan   |
 |Project Type |Console Based      |
 |Data Manage  |MySql              |
 
 ---
 
 ## 🟤 Used Python Concept
+- [x] RE Module
 - [x] Time Module
 - [x] Random Module
 - [x] Datetime Module
 - [x] Loops
 - [x] String Formatting
 - [x] Classes and Objects
+- [x] Exception Handling
+- [x] Constructor 
 - [x] Class Methods
 - [x] Conditional Statements
 
@@ -75,7 +77,18 @@ This ATM system provides a basic yet functional implementation of banking operat
 ---
 <br/>
 
-## 🟣 Screenshot
+## 🟣 Screenshot 06/06/2024
+- 01
+
+![PythonProjectA](https://github.com/yashchavan02/MiniProject-B/assets/152779289/fd8069a9-1a78-4a67-af1f-5359f2c3d812)
+
+- 02
+
+![PythonProjectB](https://github.com/yashchavan02/MiniProject-B/assets/152779289/971d494d-f898-4d48-b858-e3f0f9237294)
+
+<br/><br/>
+
+## 🟣 Screenshot 16/06/2024
 - 01
   
 ![NewPythonProjectA](https://github.com/yashchavan02/MiniProject-B/assets/152779289/c3909d86-026c-4c9b-8af4-b53041d9151c)
@@ -92,7 +105,10 @@ This ATM system provides a basic yet functional implementation of banking operat
 
 ![NewPythonProjectD](https://github.com/yashchavan02/MiniProject-B/assets/152779289/d87f765e-03b8-4b1e-bfc8-d1cda610d2fb)
 
+<br/><br/>
 
+## 🟣 Screenshot 17/06/2024
+- 01
 
-
+![MiniProjectSS3](https://github.com/yashchavan02/MiniProject-B/assets/152779289/79cd755c-a072-4360-acce-75562f63ddea)
 
