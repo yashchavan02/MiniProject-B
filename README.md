@@ -1,3 +1,11 @@
+## ⬇️ **Run Above Code On Your Local Machine :** 
+#### ✦ Copy Below Text As It Is And Run On Your CMD Pannel ➜
+
+```
+git clone https://github.com/yashchavan02/MiniProject-B.git
+```
+---
+
 ## 🔵 Mini Project B Details
 
 |Project Title| ATM Machine       |
