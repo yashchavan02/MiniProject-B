@@ -1,6 +1,22 @@
 ## ⬇️ **Run Above Code On Your Local Machine :** 
-#### ✦ Copy Below Text As It Is And Run On Your CMD Pannel ➜
+#### ➜ Copy Below Text As It Is And Run On Your CMD Pannel 
+ ✦ Follow Below Steps -
 
+#### Step 1. Open CDM Pannel `[Terminal]`
+#### Step 2. Choose The Folder To Copy This Project Code File Or Create New Using Step 3
+#### Step 3. Then Run This Command [ Give Any Name At The Place Of 'New-Folder' ]
+```
+mkdir New-Folder
+```
+#### Step 4.  Then Run This Command [ Replace 'New-Folder' By Previous Name At Step 3 ]
+```
+cd New-Folder
+```
+#### Step 5. Then Run git init For Initialize Repo With .git Folder  
+```
+git init
+```
+#### Step 6. The Run Final Step 
 ```
 git clone https://github.com/yashchavan02/MiniProject-B.git
 ```
