@@ -3,6 +3,7 @@ import datetime
 import random
 import time
 import re
+import os
 
 con = mysql.connector.connect(
     user='root',
@@ -73,6 +74,7 @@ class ATM:
             pin = input("$ Create 4 Digit PIN: ")
             if pin.isdigit() and len(pin) == 4:
                 self.pin = pin
+                os.system('cls' if os.name == 'nt' else 'clear')
                 break
             else:
                 print("$ Please enter a valid 4 digit PIN")
@@ -80,11 +82,10 @@ class ATM:
     def print_data(self):
         self.account_number = account_number_generate()
         self.acc_no = int("3241" + self.pin + self.account_number)
-
-        time.sleep(0.25)
-        print("\n$ Bank Account Is Created Successfully.")
-        time.sleep(0.25)
-        print(f"\n$ {self.acc_type.capitalize()} Bank Account")
+        print("$ Bank Account Is Created Successfully.")
+        time.sleep(0.5)
+        print("\n")
+        print(f"$ {self.acc_type.capitalize()} Bank Account")
         print(f"$ Customer Name: {self.customer_gen} {self.acc_holder_name.upper()}")
         print(f"$ Customer Email Id: {self.email_id}")
         print(f"$ Bank Account No. 3241{self.pin}{self.account_number}")
