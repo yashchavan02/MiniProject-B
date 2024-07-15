@@ -16,7 +16,7 @@ cd New-Folder
 ```
 git init
 ```
-#### Step 6. The Run Final Step 
+#### Step 6. Then Run Final Step 
 ```
 git clone https://github.com/yashchavan02/MiniProject-B.git
 ```
