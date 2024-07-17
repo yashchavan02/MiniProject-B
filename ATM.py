@@ -5,12 +5,18 @@ import time
 import re
 import os
 
-con = mysql.connector.connect(
+try:
+ con = mysql.connector.connect(
     user='root',
     host='localhost',
     database='bank',
     passwd='*********'
 )
+
+except:
+    print("Connection Error | Make Sure The Connection Info Is Correct.")
+    exit()
+
 mycursor = con.cursor()
 
 insert_customer_query = "INSERT INTO customerdata (name, email, gender, pin, bank_acc) VALUES (%s, %s, %s, %s, %s)"
